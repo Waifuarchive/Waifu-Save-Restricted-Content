@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD gunicorn app:app & python3 bot.py
+CMD gunicorn app:app --bind 0.0.0.0:$PORT & python3 bot.py
